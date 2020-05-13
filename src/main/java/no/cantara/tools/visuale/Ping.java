@@ -6,7 +6,7 @@ public class Ping extends VisualeStatus {
         this("ping");
     }
     public Ping(String serviceName) {
-        this(serviceName, null, null);
+        this(serviceName, "-not-set-", "0.0.0.0");
     }
 
     public Ping(String serviceName, String version, String ip) {

@@ -46,6 +46,11 @@ public class UpdateStatusCommand extends BaseHttpPutResilience4jCommand {
     }
 
     @Override
+    protected String getBodyAsString() {
+      return visualeStatus.toJson();
+    }
+
+    @Override
     protected URI buildUri() {
         String fullUri = getBaseUri().toString();
         if (environment == null) {
@@ -61,4 +66,6 @@ public class UpdateStatusCommand extends BaseHttpPutResilience4jCommand {
         }
         return URI.create(fullUri);
     }
+
+
 }

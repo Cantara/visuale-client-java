@@ -8,7 +8,7 @@ public class PingTest {
     @Test
     public void ping() throws Exception {
         Ping ping = new Ping("testme");
-        String expected = "{\"status\":\"OK\",\"name\":\"testme\"}";
+        String expected = "{\"status\":\"OK\",\"name\":\"testme\",\"version\":\"-not-set-\", \"ip\":\"0.0.0.0\"}";
         JSONAssert.assertEquals(expected, ping.toJson(), true);
     }
 }

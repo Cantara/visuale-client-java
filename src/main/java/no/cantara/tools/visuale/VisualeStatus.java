@@ -15,7 +15,7 @@ public class VisualeStatus {
     private final String ip;
 
     public VisualeStatus(Status status, String name) {
-        this(status,name, null, null);
+        this(status,name, "-not-set-", "0.0.0.0");
     }
 
     public VisualeStatus(Status status, String name, String version, String ip) {
