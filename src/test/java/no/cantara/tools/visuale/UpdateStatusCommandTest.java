@@ -13,7 +13,7 @@ public class UpdateStatusCommandTest {
         URI baseUri = URI.create("http://localhost:8080/status");
         String groupKey = "test";
         String serviceName = "testService";
-        VisualeStatus visualeStatus = new VisualeStatus();
+        VisualeStatus visualeStatus = new VisualeStatus(VisualeStatus.Status.OK,serviceName);
         UpdateStatusCommand command = new UpdateStatusCommand(baseUri, groupKey, serviceName)
                 .withEnv("test")
                 .withNode("n1");
@@ -26,7 +26,7 @@ public class UpdateStatusCommandTest {
         URI baseUri = URI.create("http://localhost:8080/status");
         String groupKey = "test";
         String serviceName = "testService";
-        VisualeStatus visualeStatus = new VisualeStatus();
+        VisualeStatus visualeStatus = new VisualeStatus(VisualeStatus.Status.OK,serviceName);
         UpdateStatusCommand command = new UpdateStatusCommand(baseUri, groupKey, serviceName);
         String expectedUri = "http://localhost:8080/status/testService/testService/n1";
         assertEquals(expectedUri, command.buildUri().toString());
@@ -37,7 +37,7 @@ public class UpdateStatusCommandTest {
         URI baseUri = URI.create("http://localhost:8080/status");
         String groupKey = "test";
         String serviceName = "testService";
-        VisualeStatus visualeStatus = new VisualeStatus();
+        VisualeStatus visualeStatus = new VisualeStatus(VisualeStatus.Status.OK,serviceName);
         UpdateStatusCommand command = new UpdateStatusCommand(baseUri, groupKey, serviceName)
                 .withEnv("test")
                 .withNode("n1")
