@@ -74,7 +74,7 @@
     <dependency>
       <groupId>no.cantara.base</groupId>
       <artifactId>Resilience4j-BaseCommands</artifactId>
-      <version>0.8.56</version>
+      <version>0.8.57</version>
     </dependency>
 
     <dependency>
