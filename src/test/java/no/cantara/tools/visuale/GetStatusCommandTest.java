@@ -11,7 +11,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class GetStatusCommandTest {
     private static final Logger log = getLogger(GetStatusCommandTest.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         URI baseUri = URI.create("http://localhost:8080/status");
         GetStatusCommand command = new GetStatusCommand(baseUri, "test");
         String statusJson = command.getAsJson();
