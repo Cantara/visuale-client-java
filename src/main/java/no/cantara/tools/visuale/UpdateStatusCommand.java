@@ -46,7 +46,7 @@ public class UpdateStatusCommand extends BaseHttpPutResilience4jCommand {
     }
 
     @Override
-    protected String getBodyAsString() {
+    protected String getBody() {
       return visualeStatus.toJson();
     }
 
